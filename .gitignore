@@ -1,0 +1,15 @@
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/*ain/**/build/
+!**/src/*est/**/build/
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+### Kotlin ###
+.kotlin
+
