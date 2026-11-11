@@ -1,9 +1,11 @@
+apply(from = "gradle/repos.gradle.kts")
+val repoUrl = extra["mavenRepoUrl"] as String
 
 dependencyResolutionManagement {
-    // Use Maven Central as the default repository (where Gradle will download dependencies) in all subprojects.
+    // Use the repository selected from local.properties in all subprojects.
     @Suppress("UnstableApiUsage")
     repositories {
-        mavenCentral()
+        maven(url = repoUrl)
     }
 }
 
@@ -18,7 +20,7 @@ plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
 }
 
-include(":hello-world")
-
+includeBuild("lessons")
+includeBuild("my-build-plugin")
 
 rootProject.name = "edu-kotlin-pro"

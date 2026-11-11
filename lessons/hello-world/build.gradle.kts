@@ -1,8 +1,9 @@
+
 plugins {
-    kotlin("jvm")
+    id("my-build-jvm")
 }
 
 dependencies {
-    implementation(kotlin("stdlib-jdk8"))
     implementation(kotlin("test"))
+    implementation(libs.kotlinxDatetime)
 }
