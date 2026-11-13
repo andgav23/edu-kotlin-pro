@@ -14,6 +14,5 @@ fun main() {
     val name = "Kotlin"
     println(buildMessage(name,getCurrentTime()))
 
-    getCurrentTime()
 }
 

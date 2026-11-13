@@ -13,10 +13,10 @@ gradlePlugin {
             id = "my-build-jvm"
             implementationClass = "ru.otus.plugin.BuildPluginJvm"
         }
-//        register("build-kmp") {
-//            id = "build-kmp"
-//            implementationClass = "ru.otus.otuskotlin.marketplace.plugin.BuildPluginMultiplatform"
-//        }
+        register("my-build-kmp") {
+            id = "my-build-kmp"
+            implementationClass = "ru.otus.plugin.BuildPluginMultiplatform"
+        }
     }
 }
 
@@ -27,11 +27,3 @@ repositories {
 dependencies {
     implementation(libs.pluginKotlin)
 }
-
-//subprojects {
-//    group = rootProject.group
-//    version = rootProject.version
-//    repositories {
-//        mavenCentral()
-//    }
-//}

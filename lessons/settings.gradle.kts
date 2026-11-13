@@ -8,9 +8,6 @@ dependencyResolutionManagement {
 
 pluginManagement {
     includeBuild("../my-build-plugin")
-    plugins {
-        kotlin("jvm") version providers.gradleProperty("kotlinVersion").get()
-    }
 }
 
 plugins {
