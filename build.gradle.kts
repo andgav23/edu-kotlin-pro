@@ -1,18 +1,13 @@
-plugins {
-    kotlin("jvm") apply false
-}
 
 group = "ru.otus.otuskotlin"
 version = "0.0.1"
 
-repositories {
-    mavenCentral()
+tasks.register("buildAll") {
+    group = "build"
+    description = "Собирает все вложенные сборки composite-проекта"
+    dependsOn(
+        gradle.includedBuild("lessons").task(":hello-world:build"),
+        gradle.includedBuild("event-billing").task(":example-kmp:build"),
+    )
 }
 
-subprojects {
-    group = rootProject.group
-    version = rootProject.version
-    repositories {
-        mavenCentral()
-    }
-}
